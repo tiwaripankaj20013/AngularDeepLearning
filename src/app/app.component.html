@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="text-center text-info">Welcome to Learn{{title}}</h4>
+      <p [class]="sucessclass">{{name}}</p>
+      <h3 [class.text-danger]="hasError">Class binding on condition wise </h3>
+      <h3 >Class binding on condition wise </h3>
+    </div>
+    <div class="col-12">
+      <form action="" class="form">
+        <input type="text" value="Pankaj" id="myid">
+        <input type="text" value="Pankaj" id="{{myid}}" bind-disabled="isDisabled">
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h4 [style.color]="hasError ? 'red' : 'green'">Inline style css</h4>
+      <h5 [style.color]="heighlightcolor">Inline style css</h5>
+      <h5 [ngStyle]="titlestyle">Inline style css</h5>
+    </div>
+    <div class="col-12">
+      <p>{{greeting}}</p>
+      <button (click)="onClick($event)" [ngClass]="{'btn btn-info': 'true'}" >On Click</button>
+      <button (click)="greeting='Welcome Pankaj'" [ngClass]="{'btn btn-info': 'true'}" >On Click</button>
+    </div>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
